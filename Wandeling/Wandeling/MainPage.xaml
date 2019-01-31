@@ -1,0 +1,14 @@
+﻿<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Wandeling"
+            x:Class="Wandeling.MainPage">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Toevoegen"
+                     Clicked="ToolbarItem_Clicked"/>
+    </TabbedPage.ToolbarItems>
+    <local:MapPage Title="Kaart"/>
+    <local:HistoryPage Title="Geschiedenis"/>
+    <local:EvaluationPage Title="Recensie"/>
+
+</TabbedPage>

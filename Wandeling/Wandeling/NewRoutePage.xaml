@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="WandelApp.NewRoutePage">
+
+    <StackLayout>
+        <Label x:Name="NewRouteNameLabel"
+               Text="Naam van de nieuwe route."
+               TextColor="{StaticResource Dodger Blue}"/>
+        <Entry x:Name="RouteNameEntry"
+                   Placeholder="Vul hier de route naam in."
+                   TextColor="{StaticResource Dodger Blue}"/>
+
+        <maps:Map x:Name="locationsMap"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              Margin="0,40,0,40"
+              MapType="Street"/>
+
+        <Button x:Name ="RouteSaveButton" 
+                    Text="Opslaan"
+                    Clicked="RouteSaveButton_Clicked"
+                    BackgroundColor="{StaticResource Dodger Blue}"
+                    TextColor="White"/>
+
+    </StackLayout>
+</ContentPage>
