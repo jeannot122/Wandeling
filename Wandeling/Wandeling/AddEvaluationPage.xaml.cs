@@ -19,6 +19,7 @@ namespace Wandeling
         private Entry _scoreEntry;
         private Button _saveButton;
 
+        //database connectie
         string _dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
         public AddEvaluationPage()
         {
@@ -53,6 +54,7 @@ namespace Wandeling
             Content = stackLayout;
         }
 
+        //recensie opslaan
         private async void saveButton_Clicked(object sender, EventArgs e)
         {
             var db = new SQLiteConnection(_dbPath);
@@ -68,6 +70,7 @@ namespace Wandeling
                 Score = _scoreEntry.Text
             };
             db.Insert(evaluation);
+            //bevestiging recensie
             await DisplayAlert(null, "Uw recensie is opgeslagen", "Ok");
             await Navigation.PopAsync();
         }

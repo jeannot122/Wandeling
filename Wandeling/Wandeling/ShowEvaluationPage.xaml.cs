@@ -15,6 +15,8 @@ namespace Wandeling
 	public partial class ShowEvaluationPage : ContentPage
 	{
         public ListView _ListView;
+
+        //connectie database
         string _dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
 		public ShowEvaluationPage ()
 		{
@@ -24,6 +26,7 @@ namespace Wandeling
 
             StackLayout stackLayout = new StackLayout();
 
+            //aanmaken listview om de recensie weer te geven
             _ListView = new ListView();
             _ListView.ItemsSource = db.Table<Evaluation>().OrderBy(x => x.Name).ToList();
             stackLayout.Children.Add(_ListView);
