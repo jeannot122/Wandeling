@@ -11,6 +11,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Wandeling
 {
+    // De listview wordt wel aangemaakt maar de view geeft alleen maar lege vakjes. Als een nieuwe evaluatie wordt toegevoegd
+    // komt er wel een nieuwe "lege" regel bij in de listview. 
+
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ShowEvaluationPage : ContentPage
 	{
